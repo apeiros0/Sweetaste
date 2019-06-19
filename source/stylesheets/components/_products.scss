@@ -1,0 +1,17 @@
+// products
+.header-img {
+  position: relative;
+
+  .header-img-txt {
+    width: 88px;
+    position: absolute;
+
+    top: 40px;
+    right: 39.9px;
+  }
+}
+
+.product-list {
+  font-size: $font-size-lg;
+  text-align: center;
+}

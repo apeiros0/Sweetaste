@@ -1,0 +1,80 @@
+// productCard
+.product-card {
+  .pcard-header {
+    .h-img {
+      height: 315px;
+      position: relative;
+
+      @include bg-cover;
+      
+      z-index: 1;
+      .h-txt {
+        background-color: $primary;
+        position: absolute;
+
+        top: 0;
+        left: 20px;
+
+        z-index: 2;
+        span {
+          color: white;
+          letter-spacing: 5px;
+          text-align: center;
+          vertical-align: middle;
+          @include text-vertical(vertical-lr);
+        }
+      }
+      .h-icon {
+        position: absolute;
+        top: 19px;
+        right: 22px;
+        z-index: 2;
+
+        .icon-show {
+          display: none;
+        }
+
+        // checkbox 改變圖片樣式
+        .icon_checked {
+          // 隱藏 checkbox
+          display: none;
+
+          // 被 checked 後，改變 label 後 icon 的樣式
+          &:checked {
+            // ~ 是選擇同一層的後方元素
+            ~ .icon-hidden {
+              // 把 favorite_border 隱藏
+              display: none;
+            }
+            ~ .icon-show {
+              // 顯示 favorite
+              display: block;
+            }
+          }
+        }
+
+        .material-icons {
+          cursor: pointer !important;
+        }
+      }
+    }
+  }
+
+  .pcard-body {
+    tr {
+      font-size: $font-size-big;
+      color: $primary;
+      text-align: center;
+    }
+
+    td {
+      width: 50%;
+      padding: 14px;
+      border: 1px solid $light;
+    }
+
+    .p-price {
+      font-weight: bold;
+    }
+  }
+}

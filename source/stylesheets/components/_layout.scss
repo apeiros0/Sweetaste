@@ -1,0 +1,90 @@
+$footer-logo: 40px;
+$shop-icon: 32px;
+
+// icon color
+.material-icons {
+  color: $primary;
+}
+
+// header
+.navbar {
+  .navbar-toggler {
+    border: 0;
+  }
+
+  .navbar-logo {
+    width: 219.49px;
+    height: 40px;
+    &.navbar-logo2 {
+      display: none;
+    }
+    @include ipad() {
+      &.navbar-logo1 {
+        display: none;
+      }
+      &.navbar-logo2 {
+        display: block;
+        width: 114.14px;
+        height: 17.74px;
+      }
+    }
+  }
+
+  .icon {
+    text-decoration: none;
+  }
+
+  .material-icons {
+    &:hover {
+      color: rgba($color: #000000, $alpha: 1);
+    }
+  }
+}
+
+// footer
+.footer-email {
+  background-color: $primary;
+  color: white;
+
+  .email {
+    img {
+      width: $footer-logo;
+      height: $footer-logo;
+    }
+
+    .btn {
+      width: 64px;
+      height: 56px;
+      background-color: $warning;
+    }
+
+    @include ipad() {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.footer-info {
+  background-color: $light;
+
+  .logotype-lg {
+    height: 26.6px;
+  }
+
+  .goodday {
+    width: 59.28px;
+    @include ipad() {
+      display: none;
+    }
+  }
+
+  .shop-info {
+    color: $primary;
+  }
+
+  .shop-icon {
+    width: $shop-icon;
+    height: $shop-icon;
+  }
+}

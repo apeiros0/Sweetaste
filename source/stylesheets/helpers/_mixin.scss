@@ -1,0 +1,45 @@
+// mixin
+
+// boxSizing
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+// 圖片置中
+@mixin bg-cover {
+  background-size: cover;
+  background-position: center center;
+}
+
+// 清除浮動
+@mixin clearfix {
+  clear: both;
+}
+
+// 文字垂直
+// 輸入 vertical-rl 或 vertical-lr 方向
+@mixin text-vertical($direction) {
+  writing-mode: $direction;
+  -webkit-writing-mode: $direction;
+}
+
+
+
+// local mixin
+// 圖片置中
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
+}
+
+// 圖片取代文字
+.text-hide {
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+

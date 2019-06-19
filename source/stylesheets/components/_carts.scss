@@ -1,0 +1,79 @@
+// carts
+$border-set: 1px solid $light;
+
+.cart-product-border {
+  border-top: 1px solid $light;
+  @include ipad() {
+    border-top: none;
+  }
+}
+
+.cart-product-img {
+  // min-width 視窗縮小時，不會改變其寬度
+  min-width: 110px;
+  height: 110px;
+
+  @include bg-cover;
+
+  @include ipad() {
+    width: 100%;
+  }
+}
+
+.flex-set {
+  // flex-grow: 1 可以水平佔滿剩餘空間
+  flex-grow: 1;
+}
+
+.order-quantity {
+  width: 144px;
+  height: 48px;
+
+  .order-quantity-btn {
+    width: 48px;
+    height: 48px;
+    padding: 0px;
+
+    &:hover {
+      background-color: $gray-200;
+    }
+  }
+
+  .form-control {
+    width: 48px;
+    padding: 13px 19px;
+  }
+}
+
+.price {
+  @include ipad() {
+    border-top: $border-set;
+    border-bottom: $border-set;
+  }
+}
+
+// order
+.order {
+  background-color: $primary;
+  color: white;
+
+  .order-title {
+    border-bottom: $border-set;
+    @include ipad() {
+      border-bottom: none;
+      background-color: $light;
+    }
+  }
+
+  @include ipad() {
+    background-color: transparent;
+    color: $primary;
+  }
+}
+
+.order-btn {
+  @include ipad() {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
