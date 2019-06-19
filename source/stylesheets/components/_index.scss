@@ -1,6 +1,3 @@
-$max-height: 420px;
-$margin-distance: -20px;
-
 // header-img
 .header-img {
   height: 496px;
@@ -9,20 +6,7 @@ $margin-distance: -20px;
 
 // section-info
 .section-info {
-  .section-img-cover {
-    // 圖片隨文字高度增長
-    height: 100%;
-    @include bg-cover;
-    @include ipad() {
-      height: 250px;
-    }
-  }
-
-  .section-txt-img-top {
-    margin-top: $margin-distance;
-  }
-
-  .section-info-image {
+  &-image {
     // 圖片向外突出
     margin-top: $margin-distance;
     margin-bottom: $margin-distance;
@@ -32,38 +16,54 @@ $margin-distance: -20px;
     }
   }
 
-  .section-info-content {
+  &-content {
     max-height: $max-height;
   }
+}
 
-  .text-set {
-    line-height: 2.5;
-    @include text-vertical(vertical-rl);
-    p {
-      padding-right: 16px;
-      @include ipad() {
-        padding-right: 0px;
-      }
-    }
+.section-img-cover {
+  // 圖片隨文字高度增長
+  height: 100%;
+  @include bg-cover;
+  @include ipad() {
+    height: 250px;
+  }
+}
+
+.section-txt-img-top {
+  margin-top: $margin-distance;
+}
+
+.text-set {
+  line-height: 2.5;
+  @include text-vertical(vertical-rl);
+
+  @include ipad() {
+    writing-mode: horizontal-tb;
+    line-height: 2;
+  }
+  p {
+    padding-right: 16px;
     @include ipad() {
-      writing-mode: horizontal-tb;
-      line-height: 2;
+      padding-right: 0px;
     }
   }
 }
 
-.section-txt-lg-img {
-  width: 88px !important;
-  @include ipad() {
-    display: none;
+.section-txt {
+  &-lg-img {
+    width: 88px !important;
+    @include ipad() {
+      display: none;
+    }
   }
-}
 
-.section-txt-sm-img {
-  display: none;
-  height: 60px;
-  @include ipad() {
-    display: block;
-    width: 100%;
+  &-sm-img {
+    display: none;
+    height: 60px;
+    @include ipad() {
+      display: block;
+      width: 100%;
+    }
   }
 }

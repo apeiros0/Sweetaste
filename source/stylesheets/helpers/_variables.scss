@@ -1134,3 +1134,28 @@ $positions: static, relative, absolute, fixed, sticky !default;
 
 $print-page-size:                   a3 !default;
 $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
+
+
+// index variables
+
+$max-height: 420px;
+$margin-distance: -20px;
+
+
+// layout variables
+
+$footer-logo: 40px;
+$shop-icon: 32px;
+
+
+// checkout variables
+
+$w100: 100%;
+$border-radius: 50%;
+$circle-lg: 20px;
+$circle-sm: 14px;
+
+
+// carts variables
+
+$border-set: 1px solid $light;

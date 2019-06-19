@@ -27,8 +27,6 @@
   -webkit-writing-mode: $direction;
 }
 
-
-
 // local mixin
 // 圖片置中
 .bg-cover {
@@ -43,3 +41,33 @@
   white-space: nowrap;
 }
 
+// checkout-process bar
+// 輸入 $primary、$light
+@mixin checkout-process($color) {
+  & {
+    position: relative;
+    width: $w100;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      bottom: 0;
+      right: 0;
+      left: 0;
+
+      width: $w100;
+      height: 1px;
+      background-color: $color;
+    }
+
+    .checkout-completed {
+      background-color: $color;
+      .material-icons {
+        // 調整 icon 大小
+        font-size: 1rem;
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -1,24 +1,25 @@
 // carts
-$border-set: 1px solid $light;
+.cart-product {
+  &-border {
+    border-top: 1px solid $light;
+    @include ipad() {
+      border-top: none;
+    }
+  }
 
-.cart-product-border {
-  border-top: 1px solid $light;
-  @include ipad() {
-    border-top: none;
+  &-img {
+    // min-width 視窗縮小時，不會改變其寬度
+    min-width: 110px;
+    height: 110px;
+
+    @include bg-cover;
+
+    @include ipad() {
+      width: 100%;
+    }
   }
 }
 
-.cart-product-img {
-  // min-width 視窗縮小時，不會改變其寬度
-  min-width: 110px;
-  height: 110px;
-
-  @include bg-cover;
-
-  @include ipad() {
-    width: 100%;
-  }
-}
 
 .flex-set {
   // flex-grow: 1 可以水平佔滿剩餘空間
@@ -29,7 +30,7 @@ $border-set: 1px solid $light;
   width: 144px;
   height: 48px;
 
-  .order-quantity-btn {
+  &-btn {
     width: 48px;
     height: 48px;
     padding: 0px;
@@ -57,7 +58,12 @@ $border-set: 1px solid $light;
   background-color: $primary;
   color: white;
 
-  .order-title {
+  @include ipad() {
+    background-color: transparent;
+    color: $primary;
+  }
+
+  &-title {
     border-bottom: $border-set;
     @include ipad() {
       border-bottom: none;
@@ -65,15 +71,10 @@ $border-set: 1px solid $light;
     }
   }
 
-  @include ipad() {
-    background-color: transparent;
-    color: $primary;
-  }
-}
-
-.order-btn {
-  @include ipad() {
-    margin-left: -15px;
-    margin-right: -15px;
+  &-btn {
+    @include ipad() {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
   }
 }

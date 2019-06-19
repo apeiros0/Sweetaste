@@ -1,28 +1,14 @@
 // checkout
-
-$w100: 100%;
-$border-radius: 50%;
-$circle-lg: 20px;
-$circle-sm: 14px;
-
-.checkout-process {
-  position: relative;
-  width: $w100;
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    bottom: 0;
-    right: 0;
-    left: 0;
-
-    width: $w100;
-    height: 1px;
-    background-color: $light;
+.checkout {
+  &-process {
+    @include checkout-process($light);
   }
 
-  .checkout-circle {
+  &-process-dark {
+    @include checkout-process($primary);
+  }
+
+  &-circle {
     position: relative;
 
     width: $circle-lg;
@@ -47,40 +33,6 @@ $circle-sm: 14px;
         background-color: $light;
 
         z-index: 2;
-      }
-    }
-  }
-
-  .checkout-completed {
-    background-color: $light;
-    .material-icons {
-      // 調整 icon 大小
-      font-size: 1rem;
-      border-radius: 50%;
-    }
-  }
-
-  // checkout process dark
-  &.checkout-process-dark {
-    &:after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      bottom: 0;
-      right: 0;
-      left: 0;
-
-      width: $w100;
-      height: 1px;
-      background-color: $primary;
-    }
-
-    .checkout-completed {
-      background-color: $primary;
-      .material-icons {
-        // 調整 icon 大小
-        font-size: 1rem;
-        border-radius: 50%;
       }
     }
   }

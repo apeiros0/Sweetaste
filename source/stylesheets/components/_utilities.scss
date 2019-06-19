@@ -18,9 +18,10 @@
   color: $primary;
   font-weight: bold;
   text-align: center;
-}
-.btn-block {
-  padding: 16px;
+
+  &-block {
+    padding: 16px;
+  }
 }
 
 // icon type

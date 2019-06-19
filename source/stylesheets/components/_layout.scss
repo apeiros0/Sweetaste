@@ -1,6 +1,3 @@
-$footer-logo: 40px;
-$shop-icon: 32px;
-
 // icon color
 .material-icons {
   color: $primary;
@@ -8,16 +5,17 @@ $shop-icon: 32px;
 
 // header
 .navbar {
-  .navbar-toggler {
+  &-toggler {
     border: 0;
   }
 
-  .navbar-logo {
+  &-logo {
     width: 219.49px;
     height: 40px;
     &.navbar-logo2 {
       display: none;
     }
+
     @include ipad() {
       &.navbar-logo1 {
         display: none;
@@ -47,6 +45,11 @@ $shop-icon: 32px;
   color: white;
 
   .email {
+    @include ipad() {
+      display: flex;
+      justify-content: center;
+    }
+    
     img {
       width: $footer-logo;
       height: $footer-logo;
@@ -56,11 +59,6 @@ $shop-icon: 32px;
       width: 64px;
       height: 56px;
       background-color: $warning;
-    }
-
-    @include ipad() {
-      display: flex;
-      justify-content: center;
     }
   }
 }
@@ -79,12 +77,14 @@ $shop-icon: 32px;
     }
   }
 
-  .shop-info {
-    color: $primary;
-  }
+  .shop {
+    &-info {
+      color: $primary;
+    }
 
-  .shop-icon {
-    width: $shop-icon;
-    height: $shop-icon;
+    &-icon {
+      width: $shop-icon;
+      height: $shop-icon;
+    }
   }
 }
