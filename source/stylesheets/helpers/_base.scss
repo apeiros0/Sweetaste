@@ -1,5 +1,16 @@
+// icon color
+.material-icons {
+  color: $primary;
+}
+
 // text type
-.input-txt {
+// ~ 指向有多值的屬性
+select[class~="custom-select"],
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+input[type="tel"] {
   height: 56px;
   background-color: $light;
   border: none;
@@ -12,17 +23,6 @@
   }
 }
 
-// btn type
-.btn {
-  font-size: $font-size-lg;
-  color: $primary;
-  font-weight: bold;
-  text-align: center;
-
-  &-block {
-    padding: 16px;
-  }
-}
 
 // icon type
 .input-icon {

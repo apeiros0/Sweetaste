@@ -1,0 +1,29 @@
+// btn type
+.btn {
+  font-size: $font-size-lg;
+  color: $primary;
+  font-weight: bold;
+  text-align: center;
+
+  &-block {
+    padding: 16px;
+  }
+}
+
+// invoice button
+.invoice-btn {
+  &:hover {
+    color: $primary !important;
+    background-color: $primary !important;
+  }
+
+  &.active {
+    background-color: $light !important;
+    color: $primary !important;
+    box-shadow: none;
+
+    &:hover {
+      color: $primary !important;
+    }
+  }
+}
