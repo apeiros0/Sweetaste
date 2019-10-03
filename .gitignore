@@ -1,9 +1,0 @@
-.vscode
-node_modules
-bower_components
-.tmp
-.env
-gulpfile.js
-package.json
-package-lock.json
-README.md
